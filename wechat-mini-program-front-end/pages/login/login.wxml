@@ -1,0 +1,10 @@
+<van-cell-group>
+  <van-cell title="用户名" title-width="60px" center="true">
+    <van-field value="{{ username }}" placeholder="请输入用户名" size="mini" bind:change="usernameChange" />
+  </van-cell>
+  <van-cell title="密码" title-width="60px" center="true">
+    <van-field value="{{ password }}" placeholder="请输入用户名" size="mini" password bind:change="passwordChange" />
+  </van-cell>
+  <van-button type="info" block bind:tap="login">登录</van-button>
+</van-cell-group>
+<van-toast id="van-toast" />

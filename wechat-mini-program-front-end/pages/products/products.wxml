@@ -1,0 +1,12 @@
+<view wx:if="{{ !loading }}">
+  <van-card wx:for="{{ products }}" wx:for-item="product" wx:key="id" title="{{ product.name }}" desc="{{ product.description }}" thumb="{{ product.thumb }}" price="{{ product.price }}">
+    <view slot="footer">
+      <van-button type="primary" size="mini" data-product-id="{{ product.id }}" bind:tap="buy">购买</van-button>
+    </view>
+  </van-card>
+</view>
+<view wx:if="{{ loading }}" style="text-align: center;">
+  <van-loading type="spinner" color="#1989FA"></van-loading>
+</view>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
